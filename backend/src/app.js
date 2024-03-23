@@ -18,6 +18,7 @@ app.use(
 // This line helps your server understand requests that send data in JSON format.
 // It's like your server knowing how to read a message written in a specific language (JSON).
 // The limit: "16kb" part sets a size limit for these JSON messages to keep them manageable and prevent abuse.
+
 app.use(express.json({ limit: "16kb" }));
 
 // This line helps your server understand requests that send data in the form of URL-encoded strings, usually from HTML forms.
@@ -35,4 +36,5 @@ app.use(express.static("public"));
 // This line helps your server understand cookies sent by clients (like web browsers).
 // It's like your server knowing how to read notes attached to incoming requests.
 // This allows your server to identify users or remember their preferences stored in cookies.
+
 app.use(cookieParser());
